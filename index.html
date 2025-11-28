@@ -2,52 +2,268 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Akshit Negi — Apps</title>
- <meta name="google-site-verification" content="ibsI5esVRFKnxQYTsdcG-zZIAc4NHI-v9taNO3jcdw4" />
+  <meta name="google-site-verification" content="ibsI5esVRFKnxQYTsdcG-zZIAc4NHI-v9taNO3jcdw4" />
   <meta name="description" content="Developer page of Akshit Negi — all Android apps and Play Store links." />
+  
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
   <style>
-    :root{
-      --bg: linear-gradient(180deg,#eef2ff,#f8fafc);
-      --card: linear-gradient(145deg,#fff,#f7f9fc);
-      --accent1:#6a11cb; --accent2:#2575fc;
-      --muted:#6b7280;
-      --max:1200px;
+    /* VARIABLES: Based on the "Good" Code (Dark/Cyan Theme) */
+    :root {
+      --bg: linear-gradient(135deg, #0f0f0f, #1e1e1e);
+      --card-bg: #1a1a1a;
+      --accent: #00ffff; /* Neon Cyan */
+      --accent-hover: #00e6e6;
+      --text-main: #ffffff;
+      --text-muted: #bbbbbb;
+      --max: 1200px;
     }
-    *{box-sizing:border-box}
-    body{margin:0;font-family:Inter,Segoe UI,system-ui,Roboto,-apple-system,"Helvetica Neue",Arial;line-height:1.4;background:var(--bg);color:#0f172a}
-    header{padding:40px 20px;text-align:center;background:linear-gradient(135deg,var(--accent1),#4f46e5,#2575fc);color:#fff;border-bottom-left-radius:28px;border-bottom-right-radius:28px}
-    header h1{margin:0;font-size:36px;letter-spacing:0.2px}
-    header p{margin:8px 0 0;opacity:0.95}
-    .wrap{max-width:var(--max);margin:36px auto;padding:0 18px}
-    .intro{display:flex;gap:20px;align-items:center;justify-content:space-between}
-    .intro .left{flex:1}
-    .intro .right{min-width:220px;text-align:right}
-    .dev-name{font-size:20px;font-weight:700}
-    .dev-desc{color:var(--muted);margin-top:6px}
 
-    .search{margin-top:18px;display:flex;gap:10px}
-    .search input{flex:1;padding:12px 14px;border-radius:12px;border:1px solid #e6edf7;background:white}
-    .apps-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px;margin-top:28px}
+    * { box-sizing: border-box; }
 
-    .app-card{background:var(--card);padding:18px;border-radius:14px;box-shadow:0 8px 30px rgba(14,30,37,0.06);display:flex;flex-direction:column;gap:12px;transition:transform .18s ease,box-shadow .18s ease}
-    .app-card:hover{transform:translateY(-6px);box-shadow:0 18px 45px rgba(14,30,37,0.12)}
-    .app-top{display:flex;align-items:center;gap:12px}
-    .app-icon{width:64px;height:64px;border-radius:16px;background:linear-gradient(135deg,#eef2ff,#fff);display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--accent2)}
-    .app-title{font-size:18px;font-weight:700}
-    .app-sub{color:var(--muted);font-size:13px}
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif; /* Font from Code 2 */
+      line-height: 1.6;
+      background: var(--bg);
+      color: var(--text-main);
+      scroll-behavior: smooth;
+    }
 
-    .app-desc{font-size:14px;color:#334155}
-    .app-meta{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
-    .badge{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:10px;background:white;border:1px solid #eef2ff;font-weight:600;color:var(--accent2);text-decoration:none}
-    .play-badge img{height:20px}
+    /* HEADER STYLE - Like Code 2 */
+    header {
+      padding: 60px 20px 40px;
+      text-align: center;
+      background: #000; /* Solid dark header */
+      border-bottom: 2px solid #222;
+    }
 
-    footer{max-width:var(--max);margin:40px auto 60px;padding:20px 18px;text-align:center;color:var(--muted)}
+    header h1 {
+      margin: 0;
+      font-family: 'Orbitron', sans-serif; /* Tech Font */
+      font-size: 3.2em;
+      color: var(--accent);
+      text-shadow: 0 0 15px var(--accent); /* Neon Glow */
+      letter-spacing: 1px;
+    }
 
-    /* small helpers */
-    .muted{color:var(--muted)}
-    @media(max-width:600px){header{padding:28px 12px}header h1{font-size:28px}.intro{flex-direction:column;align-items:flex-start}.intro .right{text-align:left}}
+    header p {
+      margin: 15px 0 0;
+      font-size: 1.1em;
+      color: var(--text-muted);
+    }
 
+    /* LAYOUT */
+    .wrap {
+      max-width: var(--max);
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    /* INTRO SECTION */
+    .intro {
+      display: flex;
+      gap: 30px;
+      align-items: center;
+      justify-content: space-between;
+      background: #151515;
+      padding: 30px;
+      border-radius: 15px;
+      border: 1px solid #333;
+    }
+
+    .intro .left { flex: 1; }
+    .intro .right { min-width: 220px; text-align: right; }
+
+    .dev-name {
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--accent);
+      font-family: 'Orbitron', sans-serif;
+    }
+
+    .dev-desc {
+      color: var(--text-muted);
+      margin-top: 8px;
+    }
+
+    /* SEARCH BAR styling */
+    .search {
+      margin-top: 20px;
+      display: flex;
+      gap: 10px;
+    }
+
+    .search input {
+      flex: 1;
+      padding: 14px 18px;
+      border-radius: 50px;
+      border: 1px solid #444;
+      background: #222;
+      color: #fff;
+      font-family: 'Poppins', sans-serif;
+      transition: 0.3s;
+    }
+
+    .search input:focus {
+      outline: none;
+      border-color: var(--accent);
+      box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
+    }
+
+    .search button {
+      padding: 12px 25px;
+      border-radius: 50px;
+      border: none;
+      background: var(--accent);
+      color: #000;
+      font-weight: bold;
+      cursor: pointer;
+      font-family: 'Poppins', sans-serif;
+      box-shadow: 0 0 10px rgba(0, 255, 255, 0.4);
+      transition: 0.3s;
+    }
+
+    .search button:hover {
+      background: var(--accent-hover);
+      transform: scale(1.05);
+    }
+
+    /* APPS GRID */
+    h2 {
+      margin-top: 50px;
+      font-family: 'Orbitron', sans-serif;
+      color: #fff;
+      border-left: 4px solid var(--accent);
+      padding-left: 15px;
+    }
+
+    .apps-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      margin-top: 30px;
+    }
+
+    /* APP CARD styling */
+    .app-card {
+      background: var(--card-bg);
+      padding: 25px;
+      border-radius: 15px;
+      border: 1px solid #333;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      position: relative;
+    }
+
+    .app-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 0 25px rgba(0, 255, 255, 0.15);
+      border-color: var(--accent);
+    }
+
+    .app-top {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .app-icon {
+      width: 64px;
+      height: 64px;
+      border-radius: 12px;
+      background: #2a2a2a; /* Darker Icon BG */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      color: var(--accent);
+      border: 1px solid #444;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.2em;
+    }
+
+    .app-title {
+      font-size: 19px;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .app-sub {
+      color: var(--text-muted);
+      font-size: 13px;
+    }
+
+    .app-desc {
+      font-size: 14px;
+      color: #ccc;
+      line-height: 1.6;
+    }
+
+    /* BADGES */
+    .app-meta {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      align-items: center;
+      margin-top: auto; /* Push to bottom */
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 18px;
+      border-radius: 50px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: 0.3s;
+      font-size: 14px;
+    }
+
+    /* Play Store Button - styled like the "Buy" button in Code 2 */
+    .play-badge {
+      background: var(--accent);
+      color: #000;
+      border: none;
+      box-shadow: 0 0 10px rgba(0,255,255,0.3);
+    }
+
+    .play-badge:hover {
+      background: var(--accent-hover);
+      box-shadow: 0 0 20px rgba(0,255,255,0.6);
+      transform: scale(1.05);
+    }
+
+    .play-badge img { height: 18px; }
+
+    .muted-badge {
+      color: var(--text-muted);
+      background: transparent;
+      border: 1px solid #444;
+    }
+
+    /* FOOTER */
+    footer {
+      max-width: var(--max);
+      margin: 60px auto 40px;
+      padding: 20px;
+      text-align: center;
+      color: #666;
+      border-top: 1px solid #222;
+      padding-top: 40px;
+    }
+
+    /* RESPONSIVE */
+    @media(max-width: 700px) {
+      header h1 { font-size: 2.2em; }
+      .intro { flex-direction: column; align-items: flex-start; gap: 20px;}
+      .intro .right { text-align: left; }
+    }
   </style>
 </head>
 <body>
@@ -64,19 +280,19 @@
       <div class="dev-desc">Mobile developer — Utility apps, productivity tools, and more.</div>
       <div class="search">
         <input id="search" placeholder="Search apps (example: Utility Tool Box)" />
-        <button id="clear" style="padding:12px 14px;border-radius:12px;border:0;background:linear-gradient(135deg,var(--accent1),var(--accent2));color:#fff;font-weight:700">Clear</button>
+        <button id="clear">Clear</button>
       </div>
     </div>
     <div class="right">
-      <div class="muted">Developer website</div>
-      <div style="font-weight:700;margin-top:6px">akshitnegidev.github.io</div>
+      <div style="color:var(--text-muted); font-size: 0.9em;">Developer website</div>
+      <div style="font-weight:700; margin-top:6px; color:var(--accent);">devakshit.space</div>
     </div>
   </div>
 
-  <h2 style="margin-top:28px">Published Apps</h2>
+  <h2>Published Apps</h2>
 
   <div id="apps" class="apps-grid">
-    <!-- App Card: Utility Tool Box (existing) -->
+    
     <article class="app-card" data-title="Utility Tool Box">
       <div class="app-top">
         <div class="app-icon">UT</div>
@@ -91,54 +307,33 @@
           <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><path fill='%23000000' d='M325 256L115 90v332z'/></svg>" alt="play"/>
           Open on Play Store
         </a>
-        <div class="badge muted">Downloads: 100k+</div>
+        <div class="badge muted-badge">Downloads: 100k+</div>
       </div>
     </article>
 
-    <!-- Template to add more apps later:
-    <article class="app-card" data-title="APP NAME">
-      <div class="app-top">
-        <div class="app-icon">IC</div>
-        <div>
-          <div class="app-title">APP NAME</div>
-          <div class="app-sub">Short description of the app</div>
-        </div>
-      </div>
-      <div class="app-desc">Short description. Replace this with actual text.</div>
-      <div class="app-meta">
-        <a class="badge play-badge" href="PLAY_STORE_LINK" target="_blank">
-          <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><path fill='%23000000' d='M325 256L115 90v332z'/></svg>" alt="play"/>
-          Open on Play Store
-        </a>
-        <div class="badge muted">Downloads: —</div>
-      </div>
-    </article>
-    -->
-
-    <!-- Add more app cards here -->
-
-  </div>
-
+    </div>
 </main>
 
 <footer>
-  © 2025 Akshit Negi — Developer • For details & support contact: <span class="muted">akshit@example.com</span>
+  © 2025 Akshit Negi — Developer • For details & support contact: <span style="color:var(--accent)">akshit@example.com</span>
 </footer>
 
 <script>
-  // Small client-side search to filter app cards
+  // Same logic as before
   const input = document.getElementById('search');
   const clear = document.getElementById('clear');
   const cards = Array.from(document.querySelectorAll('.app-card'));
+
   function filter(){
     const q = input.value.trim().toLowerCase();
     cards.forEach(c=>{
       const t = c.dataset.title.toLowerCase();
-      c.style.display = t.includes(q) ? '' : 'none';
+      c.style.display = t.includes(q) ? 'flex' : 'none'; // changed '' to 'flex' for flex display
     });
   }
-  input.addEventListener('input',filter);
-  clear.addEventListener('click',()=>{input.value='';filter();});
+
+  input.addEventListener('input', filter);
+  clear.addEventListener('click', ()=>{ input.value=''; filter(); });
 </script>
 
 </body>
