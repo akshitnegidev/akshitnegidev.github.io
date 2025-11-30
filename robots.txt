@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Sitemap Location (Bahut Zaroori Hai)
+Sitemap: https://devakshit.space/sitemap.xml
