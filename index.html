@@ -5,15 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>Akshit Negi — Official Apps & Software | Akshit VIP</title>
+  
   <meta name="description" content="Official home of Akshit Negi (Akshit VIP). Publisher of top-rated Android Utilities and Games. Download Utility Tool Box, ZIP Opener, and more." />
+  
   <meta name="keywords" content="Akshit Negi, Akshit VIP, Utility Tool Box, Android App Publisher, Software Creator, Negi Akshit, Best Android Tools, Mobile Games, QR Scanner App" />
+  
   <meta name="author" content="Akshit Negi" />
   <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://devakshit.space" />
 
   <meta property="og:title" content="Akshit Negi — Premium Android Software" />
   <meta property="og:description" content="High-performance apps for the modern world. Download Utility Tool Box today." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://devakshit.space" />
+
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAYklEQVR42u3QMQEAAAgDILV/51nBzw0coCXS2WZgZmBmYGZgZmBmYGZgZmBmYGZgZmBmYGZgZmBmYGZgZmBmYGZgZmBmYGZgZmBmYGZgZmBmYGZgZmBmYGZgZmBmYGZgZmBmYObiAE+vU/6lV418AAAAAElFTkSuQmCC" />
 
   <script type="application/ld+json">
   {
@@ -78,9 +84,7 @@
     @keyframes slideUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
     .animate-up { animation: slideUp 0.6s ease-out forwards; }
 
-    /* ========================
-       NAVBAR
-    ======================== */
+    /* NAVBAR */
     nav {
       position: sticky; top: 0; z-index: 1000;
       background: rgba(5, 5, 5, 0.85);
@@ -98,13 +102,10 @@
     .nav-item { cursor: pointer; color: var(--text-muted); font-weight: 500; font-size: 0.95rem; transition: 0.3s; }
     .nav-item:hover, .nav-item.active { color: var(--neon-cyan); }
     
-    /* MOBILE NAV */
     @media(max-width: 768px) { .nav-links { gap: 15px; font-size: 0.85rem; } }
 
-    /* ========================
-       HOME VIEW
-    ======================== */
-    .hero { text-align: center; padding: 100px 0 60px; }
+    /* HOME VIEW */
+    .hero { text-align: center; padding: 80px 0 60px; }
     .badge {
       display: inline-block; padding: 6px 16px; background: rgba(0, 242, 255, 0.08);
       color: var(--neon-cyan); border-radius: 50px; font-size: 0.8rem; font-weight: 700;
@@ -116,8 +117,17 @@
     }
     .highlight { color: var(--neon-cyan); }
     .hero p {
-      font-size: 1.1rem; color: var(--text-muted); max-width: 650px; margin: 0 auto 40px;
+      font-size: 1.1rem; color: var(--text-muted); max-width: 650px; margin: 0 auto 30px;
     }
+
+    /* SEARCH BAR (NEW) */
+    .search-wrapper { max-width: 500px; margin: 0 auto; position: relative; }
+    .search-input {
+      width: 100%; padding: 16px 25px; border-radius: 50px; border: 1px solid #333;
+      background: #111; color: #fff; font-size: 1rem; font-family: var(--font-body); transition: 0.3s;
+    }
+    .search-input:focus { border-color: var(--neon-cyan); outline: none; box-shadow: 0 0 15px rgba(0, 242, 255, 0.2); }
+    .search-icon { position: absolute; right: 20px; top: 50%; transform: translateY(-50%); color: #666; pointer-events: none; }
 
     /* APPS GRID */
     .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
@@ -135,24 +145,21 @@
     }
     .app-meta { margin-top: auto; padding-top: 20px; border-top: 1px solid var(--glass-border); display: flex; justify-content: space-between; color: var(--neon-cyan); font-size: 0.9rem; font-weight: 600; }
 
-    /* ========================
-       ABOUT VIEW
-    ======================== */
-    .about-box {
-      background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 20px; padding: 50px;
-    }
+    /* SEO TEXT SECTION */
+    .seo-box { margin-top: 80px; padding: 40px; background: rgba(255,255,255,0.02); border-radius: 20px; border: 1px solid var(--glass-border); }
+    .seo-box h2 { font-family: var(--font-heading); color: #fff; margin-bottom: 20px; font-size: 1.8rem; }
+    .seo-box p { color: var(--text-muted); margin-bottom: 15px; font-size: 0.95rem; }
+
+    /* ABOUT VIEW */
+    .about-box { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 20px; padding: 50px; }
     .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
     .stat-row { display: flex; gap: 40px; margin-top: 30px; }
     .stat h3 { font-family: var(--font-heading); font-size: 2.5rem; margin: 0; color: #fff; }
     .stat span { color: var(--text-muted); font-size: 0.9rem; }
 
-    /* ========================
-       CONTACT / SUPPORT VIEW
-    ======================== */
+    /* CONTACT / SUPPORT VIEW */
     .support-wrapper { max-width: 700px; margin: 0 auto; }
-    .form-container {
-      background: var(--glass-bg); padding: 40px; border-radius: 20px; border: 1px solid var(--glass-border);
-    }
+    .form-container { background: var(--glass-bg); padding: 40px; border-radius: 20px; border: 1px solid var(--glass-border); }
     .input-group { margin-bottom: 20px; }
     .label { display: block; margin-bottom: 8px; color: #ccc; font-size: 0.9rem; }
     .input-field, .select-field, .textarea-field {
@@ -160,16 +167,13 @@
       color: #fff; border-radius: 8px; font-family: var(--font-body); font-size: 1rem;
     }
     .input-field:focus, .textarea-field:focus { outline: none; border-color: var(--neon-cyan); }
-    
     .btn-submit {
       width: 100%; padding: 16px; background: var(--neon-cyan); color: #000; font-weight: 700;
       border-radius: 8px; cursor: pointer; font-size: 1rem; transition: 0.3s; border: none;
     }
     .btn-submit:hover { background: #fff; box-shadow: 0 0 20px var(--neon-cyan); }
 
-    /* ========================
-       APP DETAIL VIEW
-    ======================== */
+    /* APP DETAIL VIEW */
     .detail-hero { text-align: center; margin-bottom: 50px; }
     .big-icon {
       width: 100px; height: 100px; margin: 0 auto 20px; background: #111; border-radius: 20px;
@@ -187,6 +191,8 @@
     
     /* Footer */
     footer { text-align: center; padding: 50px 0; border-top: 1px solid var(--glass-border); margin-top: 80px; color: #555; }
+    .footer-links { margin-top: 20px; display: flex; justify-content: center; gap: 20px; font-size: 0.9rem; }
+    .footer-links a:hover { color: var(--neon-cyan); }
     
     @media(max-width: 800px) { .about-grid { grid-template-columns: 1fr; } }
   </style>
@@ -207,14 +213,19 @@
   <div id="view-home" class="view-section animate-up">
     <header class="hero container">
       <div class="badge">PREMIUM ANDROID SOFTWARE</div>
-      <h1>Intelligent Tools for <br><span class="highlight">Modern Devices</span></h1>
+      <h1>Akshit Negi — <span class="highlight">Android Apps & Software</span></h1>
       <p>Official portfolio of <strong>Akshit VIP</strong>. Creating high-performance, ad-free, and secure applications. Trusted by over 100k+ users worldwide.</p>
+      
+      <div class="search-wrapper">
+        <input type="text" id="searchInput" class="search-input" placeholder="Search apps (e.g. Zip, Game, Compass...)" onkeyup="filterApps()">
+        <i class="fas fa-search search-icon"></i>
+      </div>
     </header>
 
     <div class="container section-spacing" style="padding-top:0;">
-      <div class="grid">
+      <div class="grid" id="appsGrid">
         
-        <article class="app-card" onclick="openDetail('utility')">
+        <article class="app-card" onclick="openDetail('utility')" data-keywords="utility tool box zip rar qr scanner compass akshit negi">
           <div class="card-icon"><i class="fas fa-toolbox"></i></div>
           <h3 style="font-family:var(--font-heading); font-size:1.5rem; margin-bottom:10px;">Utility Tool Box</h3>
           <p style="color:var(--text-muted); font-size:0.95rem;">The complete productivity suite. QR Scanner, ZIP Extractor, Compass & Recorder.</p>
@@ -224,7 +235,7 @@
           </div>
         </article>
 
-        <article class="app-card" onclick="openDetail('game')">
+        <article class="app-card" onclick="openDetail('game')" data-keywords="neon dash game arcade akshit vip">
           <div class="card-icon" style="color:var(--neon-purple); border-color:var(--neon-purple)"><i class="fas fa-gamepad"></i></div>
           <h3 style="font-family:var(--font-heading); font-size:1.5rem; margin-bottom:10px;">Neon Dash</h3>
           <p style="color:var(--text-muted); font-size:0.95rem;">High-speed 2D arcade gaming. Smooth physics and neon aesthetics.</p>
@@ -235,18 +246,31 @@
         </article>
 
       </div>
+
+      <div class="seo-box">
+        <h2>About the Developer & Philosophy</h2>
+        <p>
+          Welcome to the digital workspace of <strong>Akshit Negi</strong>, widely known as <strong>Akshit VIP</strong>. I am an independent Android Developer committed to building software that respects user privacy and device performance. 
+        </p>
+        <p>
+          In a world of bloated applications, my mission is to provide <strong>Clean, Lightweight Tools</strong>. My flagship app, <strong>Utility Tool Box</strong>, replaces multiple heavy apps with a single solution for QR Scanning, File Extraction, and more. 
+        </p>
+        <p>
+          Whether you are looking for productivity utilities or immersive games like <strong>Neon Dash</strong>, you can trust Akshit Negi apps for security and efficiency.
+        </p>
+      </div>
     </div>
   </div>
 
   <div id="view-about" class="view-section container section-spacing hidden animate-up">
     <div class="hero" style="padding-top:20px;">
-      <h1>The <span class="highlight">Vision</span></h1>
+      <h2>The <span class="highlight">Vision</span></h2>
     </div>
     
     <div class="about-box">
       <div class="about-grid">
         <div>
-          <h2 style="font-family:var(--font-heading); font-size:2rem; margin-bottom:20px;">Who We Are</h2>
+          <h3 style="font-family:var(--font-heading); font-size:2rem; margin-bottom:20px;">Who We Are</h3>
           <p style="color:#ccc; margin-bottom:20px;">
             <strong>Akshit Negi</strong> (known as Akshit VIP) is an independent software publisher dedicated to the Android ecosystem. 
           </p>
@@ -282,7 +306,7 @@
 
   <div id="view-support" class="view-section container section-spacing hidden animate-up">
     <div class="hero" style="padding-top:20px;">
-      <h1>Contact <span class="highlight">Support</span></h1>
+      <h2>Contact <span class="highlight">Support</span></h2>
       <p>Need help with an app? Have a suggestion? We are here to listen.</p>
     </div>
 
@@ -331,14 +355,14 @@
     <div id="content-utility" class="hidden">
       <div class="detail-hero">
         <div class="big-icon"><i class="fas fa-toolbox"></i></div>
-        <h1 style="font-family:var(--font-heading); font-size:3rem; line-height:1;">Utility Tool Box</h1>
+        <h2 style="font-family:var(--font-heading); font-size:3rem; line-height:1; color:#fff;">Utility Tool Box</h2>
         <p style="color:var(--neon-cyan); margin-top:10px;">Publisher: Akshit Negi</p>
         <a href="https://play.google.com/store/apps/details?id=com.utilitytoolboxav.akshitnegi" target="_blank" class="download-btn">
           <i class="fab fa-google-play"></i> Download Now
         </a>
       </div>
       
-      <h3 style="border-bottom:1px solid #333; padding-bottom:15px; margin-bottom:20px;">Features Overview</h3>
+      <h3 style="border-bottom:1px solid #333; padding-bottom:15px; margin-bottom:20px; color:#fff;">Features Overview</h3>
       <div class="feature-grid">
         <div class="feat-card">
           <strong style="color:#fff; display:block; margin-bottom:5px;">QR & Barcode</strong>
@@ -362,7 +386,7 @@
     <div id="content-game" class="hidden">
       <div class="detail-hero">
         <div class="big-icon" style="color:var(--neon-purple); border-color:var(--neon-purple)"><i class="fas fa-gamepad"></i></div>
-        <h1 style="font-family:var(--font-heading); font-size:3rem;">Neon Dash</h1>
+        <h2 style="font-family:var(--font-heading); font-size:3rem; color:#fff;">Neon Dash</h2>
         <p style="color:var(--neon-purple);">Coming Soon</p>
       </div>
     </div>
@@ -371,19 +395,20 @@
   <footer>
     <div class="container">
       <p style="font-weight:700; color:#fff;">AKSHIT NEGI</p>
-      <p>&copy; 2025 All Rights Reserved.</p>
+      <div class="footer-links">
+        <a href="#" onclick="switchTab('home')">Home</a>
+        <a href="#" onclick="switchTab('about')">About</a>
+        <a href="#" onclick="switchTab('support')">Support</a>
+      </div>
+      <p style="margin-top:20px;">&copy; 2025 All Rights Reserved.</p>
     </div>
   </footer>
 
   <script>
     function switchTab(tabName) {
-      // 1. Hide all views
       document.querySelectorAll('.view-section').forEach(el => el.classList.add('hidden'));
-      
-      // 2. Remove active class from nav
       document.querySelectorAll('.nav-item').forEach(el => el.classList.remove('active'));
 
-      // 3. Show selected view
       if(tabName === 'home') {
         document.getElementById('view-home').classList.remove('hidden');
         document.getElementById('nav-home').classList.add('active');
@@ -396,7 +421,6 @@
         document.getElementById('view-support').classList.remove('hidden');
         document.getElementById('nav-support').classList.add('active');
       }
-
       window.scrollTo(0,0);
     }
 
@@ -411,6 +435,15 @@
       if(appId === 'game') document.getElementById('content-game').classList.remove('hidden');
       
       window.scrollTo(0,0);
+    }
+
+    function filterApps() {
+      const input = document.getElementById('searchInput').value.toLowerCase();
+      const cards = document.querySelectorAll('.app-card');
+      cards.forEach(card => {
+        const text = card.innerText.toLowerCase() + card.getAttribute('data-keywords');
+        card.style.display = text.includes(input) ? 'flex' : 'none';
+      });
     }
   </script>
 
